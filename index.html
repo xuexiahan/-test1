@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乡城文旅软件</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">
+          <span>乡</span>
+          <strong>乡城文旅</strong>
+        </div>
+        <div class="nav-links">
+          <a href="#food">美食</a>
+          <a href="#traffic">交通</a>
+          <a href="#hotel">民宿</a>
+          <a href="#ticket">门票</a>
+        </div>
+      </nav>
+
+      <section class="hero-content">
+        <div class="hero-text">
+          <span class="tag">Travel Booking</span>
+          <h1>文旅一键预定</h1>
+          <p>景点、美食、交通、住宿集中预定，页面以真实业务入口呈现，适合课程展示和原型答辩。</p>
+        </div>
+        <form class="search-panel" id="topSearch">
+          <label>
+            目的地
+            <input type="text" value="乡城古镇">
+          </label>
+          <label>
+            出行日期
+            <input type="date" value="2026-06-01">
+          </label>
+          <label>
+            人数
+            <select>
+              <option>2人</option>
+              <option>1人</option>
+              <option>3人</option>
+              <option>4人</option>
+            </select>
+          </label>
+          <button type="submit">生成推荐</button>
+        </form>
+      </section>
+    </header>
+
+    <section class="dashboard">
+      <aside class="summary-card">
+        <span class="tag">Order Preview</span>
+        <h2>预定清单</h2>
+        <div class="summary-list" id="summaryList">
+          <p>选择下方项目后，这里会生成预定清单。</p>
+        </div>
+        <div class="summary-total">
+          <span>预计合计</span>
+          <strong id="totalPrice">¥0</strong>
+        </div>
+        <button class="confirm-btn" id="confirmOrder" type="button">提交预定</button>
+        <p class="toast" id="toast">已生成模拟订单</p>
+      </aside>
+
+      <section class="module-grid">
+        <article class="booking-module food" id="food">
+          <div class="module-cover">
+            <span class="module-badge">美食</span>
+            <h2>美食套餐预定</h2>
+          </div>
+          <div class="module-body">
+            <div class="module-title">
+              <h3>本地特色餐饮</h3>
+              <p>推荐适合游客提前预定的套餐。</p>
+            </div>
+            <div class="item-list" data-list="food"></div>
+          </div>
+        </article>
+
+        <article class="booking-module traffic" id="traffic">
+          <div class="module-cover">
+            <span class="module-badge">交通</span>
+            <h2>交通票务预订</h2>
+          </div>
+          <div class="module-body">
+            <div class="module-title">
+              <h3>到达与接驳</h3>
+              <p>景区接驳、公交和往返车票放在同一入口。</p>
+            </div>
+            <div class="item-list" data-list="traffic"></div>
+          </div>
+        </article>
+
+        <article class="booking-module hotel" id="hotel">
+          <div class="module-cover">
+            <span class="module-badge">住宿</span>
+            <h2>民宿酒店预订</h2>
+          </div>
+          <div class="module-body">
+            <div class="module-title">
+              <h3>精选住宿</h3>
+              <p>展示价格、评分和位置，方便快速比较。</p>
+            </div>
+            <div class="item-list" data-list="hotel"></div>
+          </div>
+        </article>
+
+        <article class="booking-module ticket" id="ticket">
+          <div class="module-cover">
+            <span class="module-badge">景点</span>
+            <h2>景点门票预订</h2>
+          </div>
+          <div class="module-body">
+            <div class="module-title">
+              <h3>热门景点</h3>
+              <p>门票、开放时间和剩余票量集中展示。</p>
+            </div>
+            <div class="item-list" data-list="ticket"></div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script src="./data.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
